@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1718D1A28FFD86707D097289 /* Pods_SociAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C6F28FF058220C7636A8A2 /* Pods_SociAlertUITests.framework */; };
+		779268C8206AF9DC00E3E586 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779268C7206AF9DC00E3E586 /* Constants.swift */; };
+		779314C820603CC300C3A7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314C720603CC300C3A7DC /* AppDelegate.swift */; };
+		779314CA20603CC300C3A7DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314C920603CC300C3A7DC /* ViewController.swift */; };
+		779314CD20603CC300C3A7DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779314CB20603CC300C3A7DC /* Main.storyboard */; };
+		779314CF20603CC300C3A7DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 779314CE20603CC300C3A7DC /* Assets.xcassets */; };
+		779314D220603CC300C3A7DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779314D020603CC300C3A7DC /* LaunchScreen.storyboard */; };
+		779314DD20603CC300C3A7DC /* SociAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314DC20603CC300C3A7DC /* SociAlertTests.swift */; };
+		779314E820603CC300C3A7DC /* SociAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314E720603CC300C3A7DC /* SociAlertUITests.swift */; };
+		779314F620603E4A00C3A7DC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314F520603E4A00C3A7DC /* AlertViewController.swift */; };
+		84E96D043F2F1D334E85B0A4 /* Pods_SociAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92335DA5995E688673F9174 /* Pods_SociAlertTests.framework */; };
+		B7020AD0C80C2938CCBEE504 /* Pods_SociAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C95A25DCE2A2D651B9A345 /* Pods_SociAlert.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		779314D920603CC300C3A7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 779314BC20603CC200C3A7DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 779314C320603CC200C3A7DC;
+			remoteInfo = SociAlert;
+		};
+		779314E420603CC300C3A7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 779314BC20603CC200C3A7DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 779314C320603CC200C3A7DC;
+			remoteInfo = SociAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01E28C833C2DD242A65C1F3F /* Pods-SociAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlert/Pods-SociAlert.release.xcconfig"; sourceTree = "<group>"; };
+		14C78A9C0A5E15AF9E1B3269 /* Pods-SociAlertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlertUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlertUITests/Pods-SociAlertUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		60DD59A1C67FCA6E956E196D /* Pods-SociAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlertTests/Pods-SociAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63237B4269947567C6326D8B /* Pods-SociAlertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlertUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlertUITests/Pods-SociAlertUITests.release.xcconfig"; sourceTree = "<group>"; };
+		779268C7206AF9DC00E3E586 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		779314C420603CC200C3A7DC /* SociAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SociAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		779314C720603CC300C3A7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		779314C920603CC300C3A7DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		779314CC20603CC300C3A7DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		779314CE20603CC300C3A7DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		779314D120603CC300C3A7DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		779314D320603CC300C3A7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779314D820603CC300C3A7DC /* SociAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SociAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		779314DC20603CC300C3A7DC /* SociAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SociAlertTests.swift; sourceTree = "<group>"; };
+		779314DE20603CC300C3A7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779314E320603CC300C3A7DC /* SociAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SociAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		779314E720603CC300C3A7DC /* SociAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SociAlertUITests.swift; sourceTree = "<group>"; };
+		779314E920603CC300C3A7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779314F520603E4A00C3A7DC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		7C3A6503C7EADE58F678FFFB /* Pods-SociAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlertTests/Pods-SociAlertTests.release.xcconfig"; sourceTree = "<group>"; };
+		94C95A25DCE2A2D651B9A345 /* Pods_SociAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SociAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C6F28FF058220C7636A8A2 /* Pods_SociAlertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SociAlertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92335DA5995E688673F9174 /* Pods_SociAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SociAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAAE49350EEC0EA9764ED3F8 /* Pods-SociAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlert/Pods-SociAlert.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		779314C120603CC200C3A7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7020AD0C80C2938CCBEE504 /* Pods_SociAlert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314D520603CC300C3A7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E96D043F2F1D334E85B0A4 /* Pods_SociAlertTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314E020603CC300C3A7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1718D1A28FFD86707D097289 /* Pods_SociAlertUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25BD2880748E72B431DA7B9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAAE49350EEC0EA9764ED3F8 /* Pods-SociAlert.debug.xcconfig */,
+				01E28C833C2DD242A65C1F3F /* Pods-SociAlert.release.xcconfig */,
+				60DD59A1C67FCA6E956E196D /* Pods-SociAlertTests.debug.xcconfig */,
+				7C3A6503C7EADE58F678FFFB /* Pods-SociAlertTests.release.xcconfig */,
+				14C78A9C0A5E15AF9E1B3269 /* Pods-SociAlertUITests.debug.xcconfig */,
+				63237B4269947567C6326D8B /* Pods-SociAlertUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		778796632060A7A20004CFD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94C95A25DCE2A2D651B9A345 /* Pods_SociAlert.framework */,
+				D92335DA5995E688673F9174 /* Pods_SociAlertTests.framework */,
+				B7C6F28FF058220C7636A8A2 /* Pods_SociAlertUITests.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		779314BB20603CC200C3A7DC = {
+			isa = PBXGroup;
+			children = (
+				778796632060A7A20004CFD1 /* Frameworks */,
+				779314C620603CC200C3A7DC /* SociAlert */,
+				779314DB20603CC300C3A7DC /* SociAlertTests */,
+				779314E620603CC300C3A7DC /* SociAlertUITests */,
+				779314C520603CC200C3A7DC /* Products */,
+				25BD2880748E72B431DA7B9A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		779314C520603CC200C3A7DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				779314C420603CC200C3A7DC /* SociAlert.app */,
+				779314D820603CC300C3A7DC /* SociAlertTests.xctest */,
+				779314E320603CC300C3A7DC /* SociAlertUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		779314C620603CC200C3A7DC /* SociAlert */ = {
+			isa = PBXGroup;
+			children = (
+				779314C720603CC300C3A7DC /* AppDelegate.swift */,
+				779268C7206AF9DC00E3E586 /* Constants.swift */,
+				779314C920603CC300C3A7DC /* ViewController.swift */,
+				779314F520603E4A00C3A7DC /* AlertViewController.swift */,
+				779314CB20603CC300C3A7DC /* Main.storyboard */,
+				779314CE20603CC300C3A7DC /* Assets.xcassets */,
+				779314D020603CC300C3A7DC /* LaunchScreen.storyboard */,
+				779314D320603CC300C3A7DC /* Info.plist */,
+			);
+			path = SociAlert;
+			sourceTree = "<group>";
+		};
+		779314DB20603CC300C3A7DC /* SociAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				779314DC20603CC300C3A7DC /* SociAlertTests.swift */,
+				779314DE20603CC300C3A7DC /* Info.plist */,
+			);
+			path = SociAlertTests;
+			sourceTree = "<group>";
+		};
+		779314E620603CC300C3A7DC /* SociAlertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				779314E720603CC300C3A7DC /* SociAlertUITests.swift */,
+				779314E920603CC300C3A7DC /* Info.plist */,
+			);
+			path = SociAlertUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		779314C320603CC200C3A7DC /* SociAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 779314EC20603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlert" */;
+			buildPhases = (
+				F4C58B8A47858E5C6F5F03BC /* [CP] Check Pods Manifest.lock */,
+				779314C020603CC200C3A7DC /* Sources */,
+				779314C120603CC200C3A7DC /* Frameworks */,
+				779314C220603CC200C3A7DC /* Resources */,
+				3D2B68BA1998499A12322BAA /* [CP] Embed Pods Frameworks */,
+				02EC72ACC86E6BC6FDF45B61 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SociAlert;
+			productName = SociAlert;
+			productReference = 779314C420603CC200C3A7DC /* SociAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		779314D720603CC300C3A7DC /* SociAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 779314EF20603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlertTests" */;
+			buildPhases = (
+				4D4AA411AFB290356819C044 /* [CP] Check Pods Manifest.lock */,
+				779314D420603CC300C3A7DC /* Sources */,
+				779314D520603CC300C3A7DC /* Frameworks */,
+				779314D620603CC300C3A7DC /* Resources */,
+				E9898309B3F7E8EF91F63E63 /* [CP] Embed Pods Frameworks */,
+				BD45052785862AED2E133D2F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				779314DA20603CC300C3A7DC /* PBXTargetDependency */,
+			);
+			name = SociAlertTests;
+			productName = SociAlertTests;
+			productReference = 779314D820603CC300C3A7DC /* SociAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		779314E220603CC300C3A7DC /* SociAlertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 779314F220603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlertUITests" */;
+			buildPhases = (
+				C0F3C6655E192C6F709EC29D /* [CP] Check Pods Manifest.lock */,
+				779314DF20603CC300C3A7DC /* Sources */,
+				779314E020603CC300C3A7DC /* Frameworks */,
+				779314E120603CC300C3A7DC /* Resources */,
+				921C8D10E7DC78431F353B55 /* [CP] Embed Pods Frameworks */,
+				FBDE1063FB802AD04F6A3FDD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				779314E520603CC300C3A7DC /* PBXTargetDependency */,
+			);
+			name = SociAlertUITests;
+			productName = SociAlertUITests;
+			productReference = 779314E320603CC300C3A7DC /* SociAlertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		779314BC20603CC200C3A7DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = nyu.edu;
+				TargetAttributes = {
+					779314C320603CC200C3A7DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					779314D720603CC300C3A7DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 779314C320603CC200C3A7DC;
+					};
+					779314E220603CC300C3A7DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 779314C320603CC200C3A7DC;
+					};
+				};
+			};
+			buildConfigurationList = 779314BF20603CC200C3A7DC /* Build configuration list for PBXProject "SociAlert" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 779314BB20603CC200C3A7DC;
+			productRefGroup = 779314C520603CC200C3A7DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				779314C320603CC200C3A7DC /* SociAlert */,
+				779314D720603CC300C3A7DC /* SociAlertTests */,
+				779314E220603CC300C3A7DC /* SociAlertUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		779314C220603CC200C3A7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779314D220603CC300C3A7DC /* LaunchScreen.storyboard in Resources */,
+				779314CF20603CC300C3A7DC /* Assets.xcassets in Resources */,
+				779314CD20603CC300C3A7DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314D620603CC300C3A7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314E120603CC300C3A7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02EC72ACC86E6BC6FDF45B61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlert/Pods-SociAlert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D2B68BA1998499A12322BAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlert/Pods-SociAlert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D4AA411AFB290356819C044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		921C8D10E7DC78431F353B55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlertUITests/Pods-SociAlertUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD45052785862AED2E133D2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlertTests/Pods-SociAlertTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F3C6655E192C6F709EC29D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9898309B3F7E8EF91F63E63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlertTests/Pods-SociAlertTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C58B8A47858E5C6F5F03BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBDE1063FB802AD04F6A3FDD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SociAlertUITests/Pods-SociAlertUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		779314C020603CC200C3A7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779314CA20603CC300C3A7DC /* ViewController.swift in Sources */,
+				779314F620603E4A00C3A7DC /* AlertViewController.swift in Sources */,
+				779314C820603CC300C3A7DC /* AppDelegate.swift in Sources */,
+				779268C8206AF9DC00E3E586 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314D420603CC300C3A7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779314DD20603CC300C3A7DC /* SociAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779314DF20603CC300C3A7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779314E820603CC300C3A7DC /* SociAlertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		779314DA20603CC300C3A7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 779314C320603CC200C3A7DC /* SociAlert */;
+			targetProxy = 779314D920603CC300C3A7DC /* PBXContainerItemProxy */;
+		};
+		779314E520603CC300C3A7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 779314C320603CC200C3A7DC /* SociAlert */;
+			targetProxy = 779314E420603CC300C3A7DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		779314CB20603CC300C3A7DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				779314CC20603CC300C3A7DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		779314D020603CC300C3A7DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				779314D120603CC300C3A7DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		779314EA20603CC300C3A7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		779314EB20603CC300C3A7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		779314ED20603CC300C3A7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAAE49350EEC0EA9764ED3F8 /* Pods-SociAlert.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QHMY8QD5UA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = SociAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		779314EE20603CC300C3A7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01E28C833C2DD242A65C1F3F /* Pods-SociAlert.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QHMY8QD5UA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = SociAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		779314F020603CC300C3A7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DD59A1C67FCA6E956E196D /* Pods-SociAlertTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SociAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SociAlert.app/SociAlert";
+			};
+			name = Debug;
+		};
+		779314F120603CC300C3A7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C3A6503C7EADE58F678FFFB /* Pods-SociAlertTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SociAlertTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SociAlert.app/SociAlert";
+			};
+			name = Release;
+		};
+		779314F320603CC300C3A7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C78A9C0A5E15AF9E1B3269 /* Pods-SociAlertUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SociAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SociAlert;
+			};
+			name = Debug;
+		};
+		779314F420603CC300C3A7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63237B4269947567C6326D8B /* Pods-SociAlertUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SociAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ckilcrease.SociAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SociAlert;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		779314BF20603CC200C3A7DC /* Build configuration list for PBXProject "SociAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779314EA20603CC300C3A7DC /* Debug */,
+				779314EB20603CC300C3A7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		779314EC20603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779314ED20603CC300C3A7DC /* Debug */,
+				779314EE20603CC300C3A7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		779314EF20603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779314F020603CC300C3A7DC /* Debug */,
+				779314F120603CC300C3A7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		779314F220603CC300C3A7DC /* Build configuration list for PBXNativeTarget "SociAlertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				779314F320603CC300C3A7DC /* Debug */,
+				779314F420603CC300C3A7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 779314BC20603CC200C3A7DC /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_SociAlertUITests {
+  umbrella header "Pods-SociAlertUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

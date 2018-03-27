@@ -68,11 +68,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let alertVC = storyboard.instantiateViewController(withIdentifier: "aVC") as! AlertViewController
                 //send over access token information:
                 alertVC.accessTokenInfo = self.response
-                
                 self.window?.rootViewController = alertVC
                 
             }
-
         }
         task.resume()
       

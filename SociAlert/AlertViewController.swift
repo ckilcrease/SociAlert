@@ -209,7 +209,6 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
         self.placeName = place?.name!
         self.cityName = place?.locality!
         let params = ["message":"This is an automatic message signalling that I've issued an alarm near \(self.placeName!) in \(self.cityName!)"]
-        //print(params)
         self.shareAlert(withParams: params)
         
     }
@@ -227,7 +226,6 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
                                 let firstLocation = placemarks?[0]
                                 self.placeName = firstLocation?.name
                                 self.cityName = firstLocation?.locality
-                                print("loc is \(firstLocation)")
                                 completionHandler(firstLocation)
                             }
                             else {

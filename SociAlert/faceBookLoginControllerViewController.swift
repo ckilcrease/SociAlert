@@ -16,8 +16,6 @@ class faceBookLoginControllerViewController: UIViewController {
     @IBOutlet weak var fbBtn: UIButton!
     
     
-    
-    
     @IBAction func fbLoginClicked(_ sender: Any) {
         
         let loginManager = LoginManager()
@@ -32,29 +30,21 @@ class faceBookLoginControllerViewController: UIViewController {
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("logged in")
                 
-                
                 DispatchQueue.main.async{
                  //Display viewController:
                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
                  let viewC = storyboard.instantiateViewController(withIdentifier: "viewC") as! ViewController
-                 //send over access token information:
-                 // alertVC.accessTokenInfo = self.response
-                
                  self.present(viewC, animated: true, completion: nil)
                  
                  }
-    
-                
-            }
             
-         
+            }
             
         }
   
     }
     
     
-   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +52,6 @@ class faceBookLoginControllerViewController: UIViewController {
         fbBtn.tintColor = .clear
         fbBtn.setBackgroundImage(btnImg, for: .normal)
         fbBtn.setImage(btnImg, for: .normal)
-       // fbBtn.imageView?.contentMode = .scaleAspectFit
         fbBtn.imageEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
         
         // Do any additional setup after loading the view.

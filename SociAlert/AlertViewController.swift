@@ -15,10 +15,14 @@ import CoreLocation
 
 class AlertViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var locationSwitch: UISwitch!
+    
     var accessTokenInfo: String?
     var currentAlarmID: String?
     var auth: String?
-    
+    var placeName: String?
+    var cityName: String?
+    var paramsForStatus: [String: Any]?
     let locationManager = CLLocationManager()
     let baseURL = URL(string: "https://api-sandbox.safetrek.io/v1/alarms")
  
@@ -28,12 +32,30 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
         if (alertButton.currentTitle! == "Alert"){
             //change alert button text & issue alert
             alertButton.setTitle("Cancel Alert", for: .normal)
-            issueAlert()
+            if (accessTokenInfo != nil){ //user connected to SafeTrek
+                issueAlert()
+            }
+            
+            if (locationSwitch.isOn){
+                //Share with location data
+                lookUpCurrentLocation(completionHandler: compHandler)
+            }
+            else{
+                //set and send Facebook alert message without location:
+                let params = ["message":"This is an automatic message signalling that I've issued an alarm."]
+                self.shareAlert(withParams: params)
+            }
+            
         }
         else{
             //change alert button text & cancel existing alert
             alertButton.setTitle("Alert", for: .normal)
-            cancelAlert()
+            if (accessTokenInfo != nil){
+                cancelAlert()
+            }
+            //set and send Facebook alert message:
+            let params = ["message":"This is an automatic message signalling that I've CANCELED an alarm."]
+            self.shareAlert(withParams: params)
         }
     }
     
@@ -97,9 +119,7 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
                 }
                 task.resume()
                 
-                //set and send Facebook alert message:
-                let params = ["message":"This is an automatic message signalling that I've issued a SafeTrek alarm."]
-                self.shareAlert(withParams: params)
+                
             }
         }
     }
@@ -134,9 +154,6 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
         }
         task.resume()
         
-        //set and send Facebook alert message:
-        let params = ["message":"This is an automatic message signalling that I've CANCELED a SafeTrek alarm."]
-        self.shareAlert(withParams: params)
     }
     
     
@@ -165,6 +182,16 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (accessTokenInfo != nil){
+            //user is connected to SafeTrek
+            //display Powered By SafeTrek img under alert button:
+            let pwrByST = UIImage(named: "SafeTrek_Brand_API_Assets-03")
+            let imageVw = UIImageView(image: pwrByST)
+            imageVw.frame = CGRect(x: 30, y: 350, width: 300, height: 100)
+            
+            view.addSubview(imageVw)
+        }
+        
         //Request location authorization from user:
         self.locationManager.requestAlwaysAuthorization()
         
@@ -174,13 +201,44 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         }
 
-        //set up from Facebook SDK guide:
-        let loginButton = LoginButton(publishPermissions: [.publishActions])
-        //position login button:
-        loginButton.center.x = view.center.x
-        loginButton.center.y = 50
-        view.addSubview(loginButton)
         
+    }
+    
+    func compHandler(place: CLPlacemark?) -> Void {
+       
+        self.placeName = place?.name!
+        self.cityName = place?.locality!
+        let params = ["message":"This is an automatic message signalling that I've issued an alarm near \(self.placeName!) in \(self.cityName!)"]
+        //print(params)
+        self.shareAlert(withParams: params)
+        
+    }
+    
+    func lookUpCurrentLocation(completionHandler: @escaping (CLPlacemark?)
+        -> Void ){
+        // Use the last reported location.
+        if let lastLocation = self.locationManager.location {
+            let geocoder = CLGeocoder()
+            
+            // Look up the location and pass it to the completion handler
+            geocoder.reverseGeocodeLocation(lastLocation,
+                    completionHandler: { (placemarks, error) in
+                            if error == nil {
+                                let firstLocation = placemarks?[0]
+                                self.placeName = firstLocation?.name
+                                self.cityName = firstLocation?.locality
+                                print("loc is \(firstLocation)")
+                                completionHandler(firstLocation)
+                            }
+                            else {
+                                print("An error occurred during geocoding.")
+                            }
+            })
+        }
+        else {
+            print("No location was available.")
+            //completionHandler(nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

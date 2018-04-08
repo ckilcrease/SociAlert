@@ -8,8 +8,10 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
+    @IBOutlet weak var safeTrekBtn: UIButton!
     var redirectURI = "com.ckilcrease.socialert://oauth"//"http://localhost:3000/callback"
     var clientID = Key.clientID
     var clientSecret = Key.clientSecret
@@ -30,12 +32,20 @@ class ViewController: UIViewController {
         
         //open auth URL in mobile browser:
         UIApplication.shared.open((reqUrl?.url)!, options: [:], completionHandler: nil)
-     
+ 
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let btnImg = UIImage(named: "SafeTrek_Brand_API_Assets-01")
+        safeTrekBtn.tintColor = .clear
+        safeTrekBtn.setBackgroundImage(btnImg, for: .normal)
+        safeTrekBtn.setImage(btnImg, for: .normal)
+        safeTrekBtn.imageView?.contentMode = .scaleAspectFit
+        safeTrekBtn.imageEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

@@ -11,6 +11,8 @@ import FacebookLogin
 import FacebookCore
 import FacebookShare
 import CoreLocation
+import Firebase
+import FirebaseAuth
 
 
 class AlertViewController: UIViewController, CLLocationManagerDelegate {
@@ -26,13 +28,17 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     let baseURL = URL(string: "https://api-sandbox.safetrek.io/v1/alarms")
  
+    var currentUserRef: DatabaseReference?
+    
     @IBOutlet weak var alertButton: UIButton!
     
     @IBAction func alertAction(_ sender: Any) {
         if (alertButton.currentTitle! == "Alert"){
             //change alert button text & issue alert
             alertButton.setTitle("Cancel Alert", for: .normal)
-            if (accessTokenInfo != nil){ //user connected to SafeTrek
+            
+            if (accessTokenInfo != nil){
+                //user is connected to safetrek
                 issueAlert()
             }
             
@@ -40,10 +46,25 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
                 //Share with location data
                 lookUpCurrentLocation(completionHandler: compHandler)
             }
+           
             else{
                 //set and send Facebook alert message without location:
-                let params = ["message":"This is an automatic message signalling that I've issued an alarm."]
-                self.shareAlert(withParams: params)
+                var mssg: String?
+                self.currentUserRef?.child("mssgCreate").observe(.value, with: { (snapshot) in
+                    if let val = snapshot.value as? String{
+                        mssg = val
+                    }
+                    if mssg == nil{ //default message:
+                        mssg = "This is an automatic message signalling that I've issued an alarm."
+                    }
+                    
+                    var params: [String: String]?
+                    params = ["message": mssg!]
+                    
+                    self.shareAlert(withParams: params!)
+                })
+                
+                
             }
             
         }
@@ -54,8 +75,22 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
                 cancelAlert()
             }
             //set and send Facebook alert message:
-            let params = ["message":"This is an automatic message signalling that I've CANCELED an alarm."]
-            self.shareAlert(withParams: params)
+            
+            var mssg: String?
+            self.currentUserRef?.child("mssgCancel").observe(.value, with: { (snapshot) in
+                if let val = snapshot.value as? String{
+                    mssg = val
+                }
+                var params: [String: String]?
+                if mssg != nil{
+                    params = ["message": mssg!]
+                }
+                else{ //default message:
+                    params = ["message":"This is an automatic message signalling that I've CANCELED an alarm."]
+                }
+                self.shareAlert(withParams: params!)
+            })
+           
         }
     }
     
@@ -200,16 +235,53 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
+        
+        let dbRef = Database.database().reference(fromURL:"https://socialert-c286d.firebaseio.com/")
+        
+        //authenticate with firebase:
+        let fireBaseCredential =  FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+        
+        Auth.auth().signIn(with: fireBaseCredential) { (user, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            // User is signed in
+            guard let uid = user?.uid else{return}
+            let userReference = dbRef.child("users").child(uid)
+            self.currentUserRef = userReference
+            
+           
+            
+        }
 
         
     }
     
+    /* Completion handler for lookUpCurrentLocation */
     func compHandler(place: CLPlacemark?) -> Void {
        
         self.placeName = place?.name!
         self.cityName = place?.locality!
-        let params = ["message":"This is an automatic message signalling that I've issued an alarm near \(self.placeName!) in \(self.cityName!)"]
-        self.shareAlert(withParams: params)
+        
+        var mssg: String?
+        self.currentUserRef?.child("mssgCreate").observe(.value, with: { (snapshot) in
+            if let val = snapshot.value as? String{
+                mssg = val
+            }
+            
+            var params: [String: String]?
+            if mssg != nil{
+                params = ["message": mssg! + " Near \(self.placeName!) in \(self.cityName!)"]
+            }
+            else{ //default message:
+                params = ["message":"This is an automatic message signalling that I've issued an alarm near \(self.placeName!) in \(self.cityName!)"]
+            }
+            self.shareAlert(withParams: params!)
+            
+        })
+        
+        
         
     }
     
@@ -235,7 +307,6 @@ class AlertViewController: UIViewController, CLLocationManagerDelegate {
         }
         else {
             print("No location was available.")
-            //completionHandler(nil)
         }
     }
 

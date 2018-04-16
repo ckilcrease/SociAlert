@@ -11,6 +11,9 @@ target 'SociAlert' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'SociAlertTests' do
     inherit! :search_paths

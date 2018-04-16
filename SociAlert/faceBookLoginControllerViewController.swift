@@ -10,7 +10,8 @@ import UIKit
 import FacebookLogin
 import FacebookCore
 import FacebookShare
-
+import Firebase
+import FirebaseAuth
 
 class faceBookLoginControllerViewController: UIViewController {
     @IBOutlet weak var fbBtn: UIButton!
@@ -30,6 +31,20 @@ class faceBookLoginControllerViewController: UIViewController {
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("logged in")
                 
+                //authenticate with firebase:
+                let fireBaseCredential =  FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
+
+                Auth.auth().signIn(with: fireBaseCredential) { (user, error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    // User is signed in
+                    //...
+                }
+            }
+
+                
                 DispatchQueue.main.async{
                  //Display viewController:
                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -42,7 +57,7 @@ class faceBookLoginControllerViewController: UIViewController {
             
         }
   
-    }
+    
     
     
     override func viewDidLoad() {
@@ -57,7 +72,9 @@ class faceBookLoginControllerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -21,6 +21,9 @@
 		779314E820603CC300C3A7DC /* SociAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314E720603CC300C3A7DC /* SociAlertUITests.swift */; };
 		779314F620603E4A00C3A7DC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779314F520603E4A00C3A7DC /* AlertViewController.swift */; };
 		77C4A9A92078342B005AAE39 /* faceBookLoginControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C4A9A82078342B005AAE39 /* faceBookLoginControllerViewController.swift */; };
+		77DD0ED92084002000098A77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77DD0ED82084002000098A77 /* GoogleService-Info.plist */; };
+		77DD0EDB2084064300098A77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD0EDA2084064300098A77 /* User.swift */; };
+		77DD0EDD2084089A00098A77 /* MessageUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD0EDC2084089A00098A77 /* MessageUpdateViewController.swift */; };
 		84E96D043F2F1D334E85B0A4 /* Pods_SociAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92335DA5995E688673F9174 /* Pods_SociAlertTests.framework */; };
 		B7020AD0C80C2938CCBEE504 /* Pods_SociAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C95A25DCE2A2D651B9A345 /* Pods_SociAlert.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		779314E920603CC300C3A7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		779314F520603E4A00C3A7DC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		77C4A9A82078342B005AAE39 /* faceBookLoginControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = faceBookLoginControllerViewController.swift; sourceTree = "<group>"; };
+		77DD0ED82084002000098A77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77DD0EDA2084064300098A77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77DD0EDC2084089A00098A77 /* MessageUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUpdateViewController.swift; sourceTree = "<group>"; };
 		7C3A6503C7EADE58F678FFFB /* Pods-SociAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SociAlertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SociAlertTests/Pods-SociAlertTests.release.xcconfig"; sourceTree = "<group>"; };
 		94C95A25DCE2A2D651B9A345 /* Pods_SociAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SociAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C6F28FF058220C7636A8A2 /* Pods_SociAlertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SociAlertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,13 +155,16 @@
 		779314C620603CC200C3A7DC /* SociAlert */ = {
 			isa = PBXGroup;
 			children = (
+				77DD0ED82084002000098A77 /* GoogleService-Info.plist */,
 				779314C720603CC300C3A7DC /* AppDelegate.swift */,
 				779268C7206AF9DC00E3E586 /* Constants.swift */,
+				77DD0EDA2084064300098A77 /* User.swift */,
 				779314C920603CC300C3A7DC /* ViewController.swift */,
 				779314F520603E4A00C3A7DC /* AlertViewController.swift */,
 				779314CB20603CC300C3A7DC /* Main.storyboard */,
 				77263102207ACA6B004DE99A /* fblogin.png */,
 				77263103207ACA6C004DE99A /* SafeTrek_Brand_API_Assets-03.png */,
+				77DD0EDC2084089A00098A77 /* MessageUpdateViewController.swift */,
 				77544505207AB57E00066683 /* SafeTrek_Brand_API_Assets-01.png */,
 				77C4A9A82078342B005AAE39 /* faceBookLoginControllerViewController.swift */,
 				779314CE20603CC300C3A7DC /* Assets.xcassets */,
@@ -305,6 +314,7 @@
 				77544506207AB57E00066683 /* SafeTrek_Brand_API_Assets-01.png in Resources */,
 				77263104207ACA6C004DE99A /* fblogin.png in Resources */,
 				779314CD20603CC300C3A7DC /* Main.storyboard in Resources */,
+				77DD0ED92084002000098A77 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,9 +356,30 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SociAlert/Pods-SociAlert-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -361,9 +392,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SociAlertTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,9 +440,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SociAlertUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,9 +473,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SociAlert-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -468,7 +508,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				779314CA20603CC300C3A7DC /* ViewController.swift in Sources */,
+				77DD0EDD2084089A00098A77 /* MessageUpdateViewController.swift in Sources */,
 				779314F620603E4A00C3A7DC /* AlertViewController.swift in Sources */,
+				77DD0EDB2084064300098A77 /* User.swift in Sources */,
 				77C4A9A92078342B005AAE39 /* faceBookLoginControllerViewController.swift in Sources */,
 				779314C820603CC300C3A7DC /* AppDelegate.swift in Sources */,
 				779268C8206AF9DC00E3E586 /* Constants.swift in Sources */,

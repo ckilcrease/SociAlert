@@ -56,6 +56,7 @@ class MessageUpdateViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardOnTap()
 
         let dbRef = Database.database().reference(fromURL:"https://socialert-c286d.firebaseio.com/")
         
@@ -95,14 +96,18 @@ class MessageUpdateViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+
+extension UIViewController {
+    func hideKeyboardOnTap() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
     }
-    */
-
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
